@@ -5,14 +5,9 @@ import pandas as pd
 class TextClassificationDataset(Dataset):
     def __init__(self, texts, labels, tokenizer, max_length=512):
         # Преобразуем тексты в список если это pandas Series
-        if isinstance(texts, pd.Series):
-            texts = texts.tolist()
+        self.texts = texts
         
-        # Преобразуем метки в numpy array если это pandas Series
-        if isinstance(labels, pd.Series):
-            self.labels = labels.values
-        else:
-            self.labels = labels
+        self.labels = labels
             
         self.encodings = tokenizer(
             texts, 
