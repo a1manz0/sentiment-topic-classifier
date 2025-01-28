@@ -1,0 +1,14 @@
+model:
+  name: "DeepPavlov/rubert-base-cased"
+  num_sentiment_labels: 3
+  num_topic_labels: 8
+
+training:
+  batch_size: 16
+  learning_rate: 2e-5
+  num_epochs: 3
+  max_length: 512
+  
+data:
+  train_test_split: 0.2
+  validation_split: 0.2 
