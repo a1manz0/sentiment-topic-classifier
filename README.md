@@ -75,7 +75,3 @@ tokenizer = AutoTokenizer.from_pretrained("DeepPavlov/rubert-base-cased")
 ## Лицензия
 
 MIT
-
-## Автор
-
-Ваше имя
